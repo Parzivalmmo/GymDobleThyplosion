@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guía de Gym Runs - PokéMMO</title>
+    <title>Ruta De gym 2 Thyplosion</title>
     <style>
         :root {
-            --bg-color: #0a0b10;
-            --container-bg: #121420;
+            /* Fondo base oscuro con tonos galácticos */
+            --bg-color: #060713; 
+            --container-bg: rgba(18, 20, 32, 0.85);
             --border-color: #00f2ff;
             --text-main: #e0e6ed;
             --text-muted: #8892b0;
@@ -15,11 +16,22 @@
             --accent-neon: #ff007f;
             --accent-green: #39ff14;
             --accent-blue: #0070ff;
-            --shadow-glow: 0 0 15px rgba(0, 242, 255, 0.2);
+            --shadow-glow: 0 0 25px rgba(0, 242, 255, 0.15);
         }
 
         body {
+            /* Fondo tipo galaxia usando gradientes cruzados y un patrón de estrellas simulado */
             background-color: var(--bg-color);
+            background-image: 
+                radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+                radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+                radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
+                radial-gradient(rgba(255, 0, 127, 0.1), transparent 400px),
+                radial-gradient(rgba(0, 242, 255, 0.08), transparent 500px);
+            background-size: 550px 550px, 350px 350px, 250px 250px, 100% 100%, 100% 100%;
+            background-position: 0 0, 40px 60px, 130px 270px, top left, bottom right;
+            background-attachment: fixed;
+            
             color: var(--text-main);
             font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             margin: 0;
@@ -31,10 +43,11 @@
             max-width: 800px;
             margin: 0 auto;
             background: var(--container-bg);
-            border: 1px solid rgba(0, 242, 255, 0.3);
+            border: 1px solid rgba(0, 242, 255, 0.25);
             border-radius: 12px;
             padding: 40px;
             box-shadow: var(--shadow-glow);
+            backdrop-filter: blur(8px); /* Efecto de cristal translúcido sobre la galaxia */
         }
 
         .credits {
@@ -76,30 +89,7 @@
             font-weight: bold;
         }
 
-        .strategy-box {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 8px;
-            padding: 20px;
-            margin: 20px 0;
-        }
-
-        .strategy-link {
-            color: var(--accent-green);
-            text-decoration: none;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            border-bottom: 1px dashed var(--accent-green);
-        }
-
-        .strategy-link:hover {
-            color: #fff;
-            background: var(--accent-green);
-            box-shadow: 0 0 10px rgba(57, 255, 20, 0.6);
-            border-bottom: 1px solid transparent;
-        }
-
-        .route-list, .faq-list {
+        .route-list {
             list-style: none;
             padding: 0;
         }
@@ -135,33 +125,6 @@
         .cilan { color: var(--accent-green); font-weight: bold; }
         .optional { color: var(--text-muted); font-weight: normal; font-size: 0.95rem; }
 
-        .faq-item {
-            margin-bottom: 25px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-            padding-bottom: 20px;
-        }
-
-        .faq-question {
-            color: var(--accent-cyan);
-            font-weight: bold;
-            font-size: 1.1rem;
-            margin-bottom: 8px;
-            display: flex;
-            align-items: center;
-        }
-
-        .faq-question::before {
-            content: "[?]";
-            margin-right: 10px;
-            color: var(--accent-neon);
-            font-family: monospace;
-        }
-
-        .faq-answer {
-            color: var(--text-main);
-            padding-left: 30px;
-        }
-
         .img-placeholder {
             width: 100%;
             max-width: 624px;
@@ -178,98 +141,63 @@
 
 <div class="guide-container">
     <div class="credits">
-        Créditos: @bastien266 (Discord, Proveedor de imágenes de Regiones), @caav (Proveedor de imagen del Equipo), @FreeReign (Discord, Autor)
+       
     </div>
 
     <h1>El Equipo</h1>
     <img src="images/image3.png" alt="El Equipo" class="img-placeholder" style="max-width: 387px;">
-
-    <h2>Estrategia General</h2>
-    <div class="strategy-box">
-        <p>Cuando estés frente al líder de gimnasio, usa una <span class="highlight">Moneda Amuleto / Amuleto de Riqueza</span> e inicia la interacción para combatir. Ten en cuenta que tienen un tiempo de recarga de <span class="highlight">18 horas</span>. Después de combatir contra ellos, cúrate antes de desafiar al siguiente líder.</p>
-        <p>Puedes usar la ranura extra de tu equipo para subir de nivel a un Pokémon usando un <span class="highlight">Repartir Experiencia / Amplificador de Experiencia</span>.</p>
-        <p style="margin-top: 20px;">
-            Si deseas avanzar hacia una mejor estrategia de gym runs, consulta 
-            <a class="strategy-link" href="https://docs.google.com/document/d/1XnFfsSVh1x5sEBLzvkletNfBuKY5ymSL_UHKNjoDaeE/edit?usp=drivesdk" target="_blank">este documento</a>.
-        </p>
-    </div>
 
     <h1>Rutas</h1>
 
     <h2>Hoenn</h2>
     <img src="images/image1.png" alt="Ruta Hoenn" class="img-placeholder">
     <ul class="route-list">
-        <li>Algaria (Mossdeep)</li>
-        <li>Férrica (Rustboro)</li>
-        <li>Azuliza (Dewford)</li>
-        <li>Malvalona (Mauville)</li>
-        <li>Arborada (Fortree)</li>
+        <li>Algaria</li>
+        <li>Férrica</li>
+        <li>Azuliza</li>
+        <li>Malvalona</li>
+        <li>Arborada</li>
     </ul>
 
     <h2>Kanto</h2>
     <img src="images/image4.png" alt="Ruta Kanto" class="img-placeholder">
     <ul class="route-list">
-        <li>Carmín (Vermillion)</li>
-        <li>Azulona (Celadon)</li>
+        <li>Carmín</li>
+        <li>Azulona</li>
     </ul>
 
     <h2>Sinnoh</h2>
     <img src="images/image5.png" alt="Ruta Sinnoh" class="img-placeholder">
     <ul class="route-list">
-        <li>Pirita (Oreburgh)</li>
-        <li>Eterna (Eterna)</li>
-        <li>Rocavelo (Veilstone)</li>
-        <li>Marina (Sunyshore)</li>
-        <li>Pradera (Pastoria) <span class="optional">(Posible Kingdra, por determinar si es necesario añadir)</span></li>
+        <li>Pirita</li>
+        <li>Eterna</li>
+        <li>Rocavelo</li>
+        <li>Marina</li>
+        <li>Pradera <span class="optional">(Posible Kingdra, por determinar si es necesario añadir)</span></li>
     </ul>
 
     <h2>Johto</h2>
     <img src="images/image6.png" alt="Ruta Johto" class="img-placeholder">
     <ul class="route-list">
-        <li>Malva (Violet)</li>
-    </ul>
-    <ul class="route-list">
-        <li>Trigal (Goldenrod)</li>
+        <li>Malva</li>
+        <li>Trigal</li>
         <li>Cianwood</li>
-        <li>Caoba (Mahogany)</li>
+        <li>Caoba</li>
     </ul>
 
     <h2>Unova / Teselia</h2>
     <img src="images/image2.png" alt="Ruta Unova" class="img-placeholder">
     <ul class="route-list">
-        <li>Castelia (Porcelana)</li>
+        <li>Castelia</li>
         <li>Straiton (Gres)
             <ul class="sub-list">
                 <li><span class="cress">Chico de Pelo Azul</span> (Cress / Directo)</li>
                 <li><span class="cilan">Chico de Pelo Verde</span> (Cilan / Millo, solo lidera con dos Typhlosion, no es necesario curar)</li>
             </ul>
         </li>
-        <li>Driftveil (Fayenza)</li>
-        <li>Nacrene (Esmalte)</li>
+        <li>Driftveil</li>
+        <li>Nacrene</li>
     </ul>
-
-    <h1>Preguntas Frecuentes (FAQ)</h1>
-    <div class="faq-list">
-        <div class="faq-item">
-            <div class="faq-question">¿Los Typhlosion necesitan tener 31 IVs en Ataque Especial y 31 IVs en Velocidad?</div>
-            <div class="faq-answer">Alrededor de 21 IVs en Velocidad deberían ser suficientes, pero los 31 IVs en Ataque Especial (SpA) son sumamente importantes para maximizar los rolls de daño. Sin embargo, si en el futuro dejas de hacer Gym Runs y decides venderlos, los compradores preferirán ver 31 IVs en ambas estadísticas con las naturalezas correctas. Esto es recomendable a largo plazo por si acaso prefieres no venderlos.</div>
-        </div>
-
-        <div class="faq-item">
-            <div class="faq-question">¿Los Typhlosion obligatoriamente deben ser de naturaleza Modesta? ¿Se pueden usar también naturalezas Afable (Mild) o Alocada (Rash)?</div>
-            <div class="faq-answer">Modesta es la naturaleza que los jugadores buscan habitualmente en el mercado, pero las naturalezas Afable y Alocada funcionan exactamente igual a tu favor. La respuesta en general es la misma.</div>
-        </div>
-
-        <div class="faq-item">
-            <div class="faq-question">¿Los Typhlosion realmente necesitan ser Nivel 100?</div>
-            <div class="faq-answer">Sí, porque los gimnasios escalan al nivel más alto de tu Pokémon en el equipo, y las recompensas de dinero también aumentan a partir de ahí. Generalmente, las fuentes sugieren un nivel superior a 90 (Nivel 90+).</div>
-        </div>
-
-        <div class="faq-item">
-            <div class="faq-question">¿Puedo subir de nivel a otros Pokémon durante mi ruta de gimnasios?</div>
-            <div class="faq-answer">Por lo general, aconsejaría llevar solo un Pokémon para subir de nivel a la vez, ya que los cuadros de texto de subida de nivel consumen tiempo valioso del amuleto.</div>
-        </div>
-    </div>
 </div>
 
 </body>
